@@ -19,7 +19,7 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-  const translateYTwo = useTransform(scrollYProgress, [0, 1], [150, -200]);
+
 
   return (
     <Container id="hero" className="pt-8 pb-20md:pb-10">
@@ -93,7 +93,7 @@ const Hero = () => {
               alt="Blue cloud"
               width={600}
               height={600}
-              quality={100}
+             
               className="hidden md:flex md:absolute h-full md:w-auto md:max-w-none md:right-0"
               style={{
                 translateY: translateY,
@@ -104,11 +104,8 @@ const Hero = () => {
               alt="Blue cloud"
               width={600}
               height={600}
-              quality={100}
               className="md:absolute md:max-w-none top-[200px] md:right-0"
-              style={{
-                translateYTwo: translateYTwo,
-              }}
+              
             />
           </div>
         </div>
