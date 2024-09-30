@@ -6,12 +6,7 @@ import { Heading } from "@/components/ui/heading";
 import Bluecloud from "@/public/assets/blue-cloud.png";
 import Gadgets from "@/public/assets/gadgets-stack.png";
 import { Button } from "@/components/ui/button";
-import {
-  motion,
-  useScroll,
-  useTransform,
-
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   LoginLink,
   RegisterLink,
@@ -25,7 +20,6 @@ const Hero = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   const translateYTwo = useTransform(scrollYProgress, [0, 1], [150, -200]);
-
 
   return (
     <Container id="hero" className="pt-8 pb-20md:pb-10">
@@ -92,31 +86,31 @@ const Hero = () => {
                 translateYTwo: translateYTwo,
               }}
             />
-          </div> */}<div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-  <motion.img
-    src={Bluecloud.src}
-    alt="Blue cloud"
-    width={600}
-    height={600}
-    quality={100}
-    className="hidden md:flex md:absolute h-full md:w-auto md:max-w-none md:right-0"
-    style={{
-      translateY: translateY,
-    }}
-  />
-  <motion.img
-    src={Gadgets.src}
-    alt="Blue cloud"
-    width={600}
-    height={600}
-    quality={100}
-    className="md:absolute md:max-w-none top-[200px] md:right-0"
-    style={{
-      translateYTwo: translateYTwo,
-    }}
-  />
-</div>
-
+          </div> */}
+          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
+            <motion.img
+              src={Bluecloud.src}
+              alt="Blue cloud"
+              width={600}
+              height={600}
+              quality={100}
+              className="hidden md:flex md:absolute h-full md:w-auto md:max-w-none md:right-0"
+              style={{
+                translateY: translateY,
+              }}
+            />
+            <motion.img
+              src={Gadgets.src}
+              alt="Blue cloud"
+              width={600}
+              height={600}
+              quality={100}
+              className="md:absolute md:max-w-none top-[200px] md:right-0"
+              style={{
+                translateYTwo: translateYTwo,
+              }}
+            />
+          </div>
         </div>
       </div>
     </Container>
